@@ -2,7 +2,6 @@ downloadData<-function(){
   
   ##required packages
   require(lubridate)
-  require(chron)
   
   ##Loading data from the working directory.
   ##Split each row into nine columns
@@ -19,5 +18,5 @@ downloadData<-function(){
   ##convering the DateTime column into as.POSIXlt
   dataSet$DateTime<-as.POSIXct(strptime(dataSet$DateTime, "%d/%m/%Y %H:%M:%S"))
       
-  invisible(dataSet)
+  invisible(dataSet) 
 }

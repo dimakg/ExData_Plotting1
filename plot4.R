@@ -15,18 +15,20 @@ plot4<-function(){
   
   
   ##plotting the top left graph
-  plot(data$DateTime,data$Global_active_power, type ="l", main=NULL, ylab="Global Active Power (kilowatts)",
+  plot(data$DateTime,data$Global_active_power, type ="l", main=NULL, ylab="Global Active Power",
        xlab = "")
   
   ##plotting the bottom left graph
-  plot(data$DateTime,data$Sub_metering_1,type="n", main=NULL, ylab="Energy sub Metering",
+  plot(data$DateTime,data$Sub_metering_1,type="n", main=NULL, ylab="Energy sub metering",
        xlab = "")
   lines(data$DateTime,data$Sub_metering_1)
   lines(data$DateTime,data$Sub_metering_2,col="red")  
   lines(data$DateTime,data$Sub_metering_3,col="blue")
   
-  ##adding legend to the bottom left graph
-  legend("topright", col=c("black","red","blue"), 
+  
+  
+  ##adding legend to the bottom left graph 
+  legend("topright", col=c("black","red","blue"), bty="n",
          legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
          lty=c(1,1) # gives the legend appropriate symbols (lines)
   )

@@ -11,7 +11,7 @@ plot3<-function(){
   png(filename="plot3.png",width = 480,height=480)
   
   ##plotting the graph
-  plot(data$DateTime,data$Sub_metering_1,type="n", main=NULL, ylab="Energy sub Metering",
+  plot(data$DateTime,data$Sub_metering_1,type="n", main=NULL, ylab="Energy sub metering",
        xlab = "")
   lines(data$DateTime,data$Sub_metering_1)
   lines(data$DateTime,data$Sub_metering_2,col="red")  
